@@ -8,29 +8,29 @@ import { FaGithub } from "react-icons/fa6";
 // You can also add more properties if you want to display more information about your projects.
 const myProjects = [
   {
-    title: 'Project 1',
-    description: 'Description of project 1',
-    repositoryLink: 'Link to the GitHub repository',
+    title: 'HTML IT Member Webpage ',
+    description:'A static web page built using HTML, designed for IT members. This project focuses on structuring content effectively, implementing semantic HTML elements, and ensuring accessibility.',
+    repositoryLink: 'https://github.com/Mandee-tech/Path2tech_HTML_Project',
   },
   {
-    title: 'Project 2',
-    description: 'Description of project 2',
-    repositoryLink: 'Link to the GitHub repository',
+    title: 'CSS Email Template Webpage ',
+    description: 'An email template designed to improve the user’s email viewing experience. This project focuses on creating a structured and user-friendly layout using HTML and CSS, ensuring readability and responsiveness across different devices.',
+    repositoryLink: 'https://github.com/Mandee-tech/Css-Project',
   },
   {
-    title: 'Project 3',
-    description: 'Description of project 3',
-    repositoryLink: 'Link to the GitHub repository',
+    title: 'JavaScript TODO List',
+    description: 'A task management application built using JavaScript. This project allows users to add, delete, and mark tasks as completed, demonstrating fundamental JavaScript skills such as functions, event handling, and basic logic for managing tasks.',
+    repositoryLink: 'Mandee-tech/JS_Project',
   },
   {
-    title: 'Project 4',
-    description: 'Description of project 4',
-    repositoryLink: 'Link to the GitHub repository',
+    title: 'Weather-App',
+    description: 'A user-friendly weather application that fetches real-time weather data using the OpenWeatherMap API. Built with HTML, CSS, and JavaScript, it displays current temperature, conditions, and weather icons based on user input. Emphasized responsive design and clear UI for easy access to weather information.',
+    repositoryLink: 'https://github.com/Mandee-tech/Weather-App-Template',
   },
   {
-    title: 'Project 5',
-    description: 'Description of project 5',
-    repositoryLink: 'Link to the GitHub repository',
+    title: 'Library App',
+    description: ' A virtual book-tracking app that lets users add, view, and delete books from a personal library. Built using JavaScript and DOM manipulation, it uses object constructors and dynamic rendering to manage the book list directly ',
+    repositoryLink: 'https://github.com/RoscelinMendoza/PathToTechDOM6',
   },
 ];
 const Projects = () => {

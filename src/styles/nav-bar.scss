@@ -1,54 +1,97 @@
+
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 100px;
-  background-color: #744af6;
-  color: white;
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 98;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.navigation h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.lg-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.lg-links a {
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid transparent;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  font-weight: 500;
+}
+
+.lg-links a:hover,
+.lg-links a.active {
+  color: #0ff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #0ff;
+}
+
+.mobile-menu {
+  display: none;
+  font-size: 1.8rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
   .lg-links {
     display: none;
-    font-size: 1.2rem;
-    @media screen and (min-width: $laptop) {
-      display: flex;
-    }
-    a {
-      margin-left: 20px;
-    }
   }
-  .sm-active {
-    display: flex;
-    @media screen and (min-width: $laptop) {
-      display: none;
-    }
+
+  .mobile-menu {
+    display: block;
   }
-  .sm-links {
-    color: black;
-    flex-direction: column;
-    position: fixed;
-    background-color: white;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    border-left: solid 1px black;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    width: 200px;
-    padding: 20px 10px 0;
-    z-index: 99;
-    a {
-      margin: 3px 0;
-      font-size: 1.1rem;
-    }
-  }
-  a:hover {
-    color: blue;
-    text-decoration: underline;
-  }
-  button:hover {
-    background-color: gray;
-    color: white;
-  }
+}
+
+/* Mobile slide-out menu */
+aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background: #1f1c2c;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 999;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+aside a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+aside a:hover {
+  color: #00f0ff;
+}
+
+.close-icon {
+  font-size: 2rem;
+  align-self: flex-end;
+  color: #ffffff;
+  cursor: pointer;
 }

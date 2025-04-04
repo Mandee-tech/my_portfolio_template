@@ -1,15 +1,15 @@
 import { NavLink } from 'react-router-dom';
-import PlaceholderImage from '../assets/placeholder_image.png';
+import profileImage from '../assets/IMG_9237.jpg';
 
 // Replace these variables with your information
-const firstName = 'Replace with your first name';
-const jobTitle = 'Replace with your title';
-const company = 'Replace with your company name';
-const mainDuty = 'Replace with your main duty';
-const jobLocation = 'Replace with your job location';
-const briefJobDescription = 'Replace with a brief description of your job';
-const careerObjective = 'Replace with your career objective';
-const personalLife = 'Replace with a brief description of your personal life';
+const firstName = 'Mandee';
+const jobTitle = 'Full Stack Developer & Creative Technologist';
+const company = 'Self-Taught / NPower Path2Tech Grad';
+const mainDuty = 'Building inclusive, human-centered digital experiences';
+const jobLocation = 'Maryland';
+const briefJobDescription = 'I\'m passionate about turning ideas into intuitive interface and solving real-world problems through clean code.';
+const careerObjective = 'I\'m looking for opportunities where I can grow as a front-end or UX/UI developer.';
+const personalLife = 'Outside of tech, I\'m a dedicated mom, a creative spirit, and a strong advocate for community and healing.';
 
 const About = () => {
   return (
@@ -17,7 +17,7 @@ const About = () => {
       <section className='about-content-container'>
         <section className='image-container'>
           {/* Replace this placeholder image and alt tag with a professional headshot */}
-          <img className='headshot' src={PlaceholderImage} alt="placeholder image" />
+          <img className='headshot' src={profileImage} alt="Mandee Crumpton" />
         </section>
         <section className='description-container'>
           <h2 className='text-xl font-medium'>I&apos;m {firstName}, a {jobTitle} working for, {company} on {mainDuty} located in, {jobLocation}</h2>
@@ -30,5 +30,5 @@ const About = () => {
       </section>
     </main>
   )
-}
+};
  export default About;

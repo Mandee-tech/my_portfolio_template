@@ -1,52 +1,119 @@
+@import './variables'; // optional if you're using a variables file
+
 .home-container {
-  flex:1;
+  background: linear-gradient(135deg, #0f0f3e, #1f005c, #00d4ff);
+  color: white;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  .home-subsection {
-    min-height: 100vh;
-    padding: 50px 15px 0;
-    @media screen and (min-width: $tablet) {
-      padding: 50px 70px 0;
-    }
-    @media screen and (min-width: $laptop) {
-      padding: 50px 100px 0;
-    }
-    .subsection-intro-header {
-      font-size: 1.5rem;
-    }
-    .subsection-big-header {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    .subsection-paragraph {
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-      max-width: 700px;
-    }
-    a {
-      border: solid 1px black;
-      max-width: 200px;
-      padding: 5px;
-      text-align: center;
-    }
-    a:hover {
-      background-color: black;
-      color: white;
-    }
+  align-items: center;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-subsection {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 40px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.text-4xl {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00d4ff;
+}
+
+.subsection-paragraph {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #e0e0e0;
+}
+
+a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 2px solid #00d4ff;
+  background-color: transparent;
+  color: #00d4ff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px #00d4ff;
+}
+
+a:hover {
+  background-color: #00d4ff;
+  color: #0f0f3e;
+  transform: translateY(-2px);
+}
+
+/* Animated fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .home-hero {
-    position: relative;
-    .hero-background {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .overview {
-    background-color: whitesmoke;
+}
+
+/* Section backgrounds for contrast */
+.overview {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for consistency */
+  color: #e0e0e0; /* Light text for good contrast */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3); /* Soft blue glow */
+  animation: fadeIn 1.2s ease-in-out; /* Fade-in animation for smooth appearance */
+  margin-bottom: 40px; /* Space between sections */
+}
+
+.projects {
+  background-color: rgba(0, 0, 0, 0.4); /* Dark background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Soft white glow */
+  animation: fadeIn 1.2s ease-in-out; /* Smooth fade-in */
+  margin-bottom: 40px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Links inside the overview and projects sections */
+.overview a,
+.projects a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 2px solid #00d4ff; /* Consistent border color */
+  background-color: transparent;
+  color: #00d4ff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px #00d4ff;
+}
+
+/* Hover effect for links */
+.overview a:hover,
+.projects a:hover {
+  background-color: #00d4ff; /* Blue background on hover */
+  color: #000;
+  transform: translateY(-2px); /* Subtle hover lift effect */
 }
